@@ -1,0 +1,28 @@
+<div class="moveee">
+
+    <form (submit)="ok(pelicula)">
+        <input type="text" placeholder="listo" #pelicula>
+        <button>
+            obtener
+        </button>
+
+
+
+    </form>
+
+    <div class="container">
+        <div class="row">
+        <div *ngIf="movies">
+            <div *ngFor="let movie of movies"> 
+                <div class="col-md-3">
+                    <img src="{{movie.Poster}}" class="img-responsive">
+                    <h4>{{movie.Title}} ({{movie.Year}})</h4>
+                    <a class="btn btn-default" role="button"[routerLink]="['/movie', movie.imdbID]">View more</a>
+                   
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+</div>
