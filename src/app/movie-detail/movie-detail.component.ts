@@ -22,7 +22,7 @@ export class MovieDetailComponent implements OnInit {
     this.id = this._activatedRoute.snapshot.params['id'];
 
     this.omdb.getOmdbDetail(this.id)
-    .subscribe(data =>this.moviesDetail=data,data =>console.log(data));
+    .subscribe(res=>{this.moviesDetail=res, console.log(res)});
   }
 
 }

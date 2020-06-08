@@ -1,28 +1,52 @@
-<div class="moveee">
+<div class="container">
+    <div class="content">
+        <h1>Busque informacion de sus titulos preferidos</h1>
+        <form (submit)="busqueda(title)" class="formulario">
+            <div class="lista">
+                <mat-card>
+                    <mat-form-field>
+                        <input matInput placeholder="Ingrese titulo " #title>
+                    </mat-form-field>
+    
+             
+               
+                    <button  mat-flat-button color="primary"><p>Buscar pelicula</p></button>
+                </mat-card>
 
-    <form (submit)="ok(pelicula)">
-        <input type="text" placeholder="listo" #pelicula>
-        <button>
-            obtener
-        </button>
-
-
-
-    </form>
-
-    <div class="container">
-        <div class="row">
-        <div *ngIf="movies">
-            <div *ngFor="let movie of movies"> 
-                <div class="col-md-3">
-                    <img src="{{movie.Poster}}" class="img-responsive">
-                    <h4>{{movie.Title}} ({{movie.Year}})</h4>
-                    <a class="btn btn-default" role="button"[routerLink]="['/movie', movie.imdbID]">View more</a>
-                   
-                </div>
             </div>
-        </div>
+                       
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<div class="container">
+    <div class="content">
+        <div *ngIf="movies">
+            <div *ngFor="let movie of movies">
+                <mat-card class="card-pelicula">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title><p>{{movie.Title}}</p></mat-card-title>
+                        <mat-card-subtitle><p>{{movie.Year}}</p></mat-card-subtitle>
+                      </mat-card-header>
+                    <img mat-card-image src="{{movie.Poster}}" alt="movie.Title">
+                    <button mat-flat-button color="primary" role="button"[routerLink]="['/movie', movie.imdbID]" >Ver Más</button>
+
+
+                </mat-card>
+               
+              
+
+            </div>
+       
+
         </div>
 
+
+    </div>
 
 </div>

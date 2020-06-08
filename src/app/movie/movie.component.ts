@@ -18,10 +18,11 @@ export class MovieComponent implements OnInit {
 
   getOmdb(pelicula){
         this.omdb.getOmdbTitle(pelicula)
-        .subscribe(res =>this.movies=res.Search);
+        .subscribe(res => this.movies = res.Search);
+       
   }
 
-  ok(pelicula: HTMLInputElement){
+  busqueda(pelicula: HTMLInputElement){
     this.getOmdb(pelicula.value)
     pelicula.value ='';
     pelicula.focus()

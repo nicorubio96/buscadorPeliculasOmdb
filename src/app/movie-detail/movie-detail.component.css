@@ -1,0 +1,36 @@
+
+
+
+
+.container{
+    width:90%;
+    margin:auto;
+    -webkit-box-shadow: 14px 10px 9px 15px rgba(0,0,0,0.57);
+    -moz-box-shadow: 14px 10px 9px 15px rgba(0,0,0,0.57);
+    box-shadow: 14px 10px 9px 15px rgba(0,0,0,0.57);
+    
+  
+ 
+ 
+}
+
+.content{
+    width: 80%;
+    
+
+    margin: auto;
+   
+  
+}
+
+
+.example-card {
+    width:50%;
+    
+    margin: auto;
+
+  }
+
+img{
+    height:320px;
+}  

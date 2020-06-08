@@ -1,11 +1,51 @@
-<div>
+<div class="container">
     <div *ngIf="moviesDetail">
-        <button type="button" (click)="backHome()">back</button>
+        <div class="content">
+            
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{moviesDetail.Title}}</mat-card-title>
+                      <mat-card-subtitle>{{moviesDetail.Year}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="{{moviesDetail.Poster}}" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                      <p>
+                      {{moviesDetail.Plot}}
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button>{{moviesDetail.Actors}}</button>
+                      <button mat-button>{{moviesDetail.Genre}}</button>
+                    </mat-card-actions>
+                    <button mat-flat-button color="primary" (click)="backHome()">Regresar</button>
+                  </mat-card>
+                  
 
-        <img src="{{moviesDetail.Poster}}">
-        <h1>{{moviesDetail.Title}}</h1>
+
+            
+                
+
+        </div>
+       
+      
+        
+       
+        
+        
+        
+  
+        
+      
+      
 
     </div>
 
+   
+    
 
 </div>
+
+
+
+
